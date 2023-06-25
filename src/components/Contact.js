@@ -57,7 +57,7 @@ const Contact = ({page, cHov}) => {
             elems[3]?.classList.remove("norm")
         }
     // eslint-disable-next-line
-    }, [page])
+    }, [window.scrollY])
 
 
     const formik = useFormik({

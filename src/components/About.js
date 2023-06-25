@@ -33,7 +33,7 @@ const About = ({page, VW}) => {
             })
         }
     // eslint-disable-next-line
-    }, [page])
+    }, [window.scrollY])
 
 
     return (

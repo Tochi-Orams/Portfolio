@@ -54,7 +54,7 @@ const Skills = ({page}) => {
             })
         }
     // eslint-disable-next-line
-    }, [page])
+    }, [window.scrollY])
 
     //  icon hover effects
     const handelHover = (x) => {

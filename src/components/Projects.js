@@ -19,6 +19,7 @@ const Projects = ({page, VW}) => {
         document.getElementById("pContent"),
         document.querySelector(".VP"),
         document.querySelector(".aProj"),
+        document.getElementById("port")
     ]
 
     useEffect(() => {
@@ -42,7 +43,7 @@ const Projects = ({page, VW}) => {
             document.getElementById("allProj")?.classList.remove("norm")
         }
     // eslint-disable-next-line
-    }, [page])
+    }, [window.scrollY])
 
     useEffect(() => {
         if (page === "projects") {
@@ -326,7 +327,7 @@ const Projects = ({page, VW}) => {
                     <FontAwesomeIcon id="dChev" icon={faChevronDown} size="2x" />
                 </span>}
             </button>
-            <a href="google.com" target="_blank" rel="noreferrer" id="port">
+            <a href="https://github.com/Tochi-Orams/Portfolio" target="_blank" rel="noreferrer" id="port">
                 <img src={GHO} alt="GitHub"/>
                 <p>This Portfolio</p>
             </a>

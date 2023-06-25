@@ -29,25 +29,45 @@ const Home = ({page, setPage, handleNav, VW, cHov, setSec}) => {
     }
   }, [pos])
 
-  useEffect(() => {
-    window.addEventListener("scroll", handlePlx)
-    return () => window.removeEventListener("scroll", handlePlx)
-  })
-
-
   // Change page state on scroll
-  useEffect(() => {
-    if (window.scrollY < limit/8) {
+  // const changeSec = () => {
+  //   console.log(window.scrollY)
+  //   if (window.scrollY < limit/8) {
+  //     setPage("home")
+  //   } else if (window.scrollY >= limit/8 && window.scrollY < limit/2) {
+  //     setPage("about")
+  //   } else if (window.scrollY >= limit/2 && window.scrollY < limit/4 + limit/2) {
+  //     setPage("about2")
+  //   } else if (window.scrollY >= limit/4 + limit/2 && window.scrollY < limit) {
+  //     setPage("projects")
+  //   } else if (window.scrollY >= limit) {
+  //     setPage("contact")
+  //   }
+  // }
+
+  const changeSec = () => {
+    if (window.scrollY < limit * 0.2) {
       setPage("home")
-    } else if (window.scrollY >= limit/8 && window.scrollY < limit/2) {
+    } else if (window.scrollY >= limit * 0.2 && window.scrollY < limit * 0.4) {
       setPage("about")
-    } else if (window.scrollY >= limit/2 && window.scrollY < limit/4 + limit/2) {
+    } else if (window.scrollY >= limit * 0.4 && window.scrollY < limit * 0.6) {
       setPage("about2")
-    } else if (window.scrollY >= limit/4 + limit/2 && window.scrollY < limit) {
+    } else if (window.scrollY >= limit * 0.6 && window.scrollY < limit * 0.8) {
       setPage("projects")
-    } else if (window.scrollY >= limit) {
+    } else if (window.scrollY >= limit * 0.8) {
       setPage("contact")
     }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      handlePlx()
+      changeSec()
+    })
+    return () => window.removeEventListener("scroll", () => {
+      handlePlx()
+      changeSec()
+    })
   })
 
   return (

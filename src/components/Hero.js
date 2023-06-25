@@ -19,7 +19,7 @@ const Hero = ({handleNav, page, VW}) => {
             }, 1000);
         }
     // eslint-disable-next-line
-    }, [page])
+    }, [window.scrollY])
 
     useEffect(() => {
         if (CTA) {

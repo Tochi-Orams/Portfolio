@@ -49,7 +49,6 @@ const PixelPraise = ({setPage, setSec, handleNav}) => {
                 <div id="hLeft">
                     <h1>PixelPraise</h1>
                     <span>
-                        <a href="google.com" target="_blank" rel="noreferrer" className="pButton">Live Demo</a>
                         <a href="https://github.com/Tochi-Orams/Photo-Rater" target="_blank" rel="noreferrer" className="pButton">View Code</a>
                     </span>
                 </div>
