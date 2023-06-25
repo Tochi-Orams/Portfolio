@@ -48,7 +48,7 @@ const Hero = ({handleNav, page, VW}) => {
                 </h4>
                 {VW > 1750 ?
                 <div id="underLinks">
-                    <a className="resume" href="https://google.com">Resume</a>
+                    <a className="resume" href={require("../assets/documents/Resume.pdf")} target="_blank" rel="noreferrer">Resume</a>
                     <a href="https://github.com/Tochi-Orams" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faGithub} size="3x" />
                     </a>
