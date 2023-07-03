@@ -6,7 +6,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Skills from './Skills';
 
-const Home = ({page, setPage, handleNav, VW, cHov, setSec}) => {
+const Home = ({page, setPage, handleNav, VW, cHov, sec, setSec}) => {
     setTimeout(() => {
         setSec("main")
     }, 100);
@@ -29,22 +29,6 @@ const Home = ({page, setPage, handleNav, VW, cHov, setSec}) => {
     }
   }, [pos])
 
-  // Change page state on scroll
-  // const changeSec = () => {
-  //   console.log(window.scrollY)
-  //   if (window.scrollY < limit/8) {
-  //     setPage("home")
-  //   } else if (window.scrollY >= limit/8 && window.scrollY < limit/2) {
-  //     setPage("about")
-  //   } else if (window.scrollY >= limit/2 && window.scrollY < limit/4 + limit/2) {
-  //     setPage("about2")
-  //   } else if (window.scrollY >= limit/4 + limit/2 && window.scrollY < limit) {
-  //     setPage("projects")
-  //   } else if (window.scrollY >= limit) {
-  //     setPage("contact")
-  //   }
-  // }
-
   const changeSec = () => {
     if (window.scrollY < limit * 0.2) {
       setPage("home")
@@ -62,11 +46,15 @@ const Home = ({page, setPage, handleNav, VW, cHov, setSec}) => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       handlePlx()
-      changeSec()
+      if (sec === "main") {
+        changeSec()
+      }
     })
     return () => window.removeEventListener("scroll", () => {
       handlePlx()
-      changeSec()
+      if (sec === "main") {
+        changeSec()
+      }
     })
   })
 

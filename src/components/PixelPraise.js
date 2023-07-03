@@ -118,7 +118,7 @@ const PixelPraise = ({setPage, setSec, handleNav}) => {
                     </div>
                     <div className="gif">
                         <img src={require("../assets/PR Demo 2.gif")} alt="PixelPraise Demo" />
-                        <p>Customizing the PicelPraise themes and accents</p>
+                        <p>Customizing the PixelPraise themes and accents</p>
                     </div>
                     <div id="WF">
                         <h2>Workflow</h2>

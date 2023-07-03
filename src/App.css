@@ -152,6 +152,7 @@ section {
   transition: all 0.3s ease;
   padding-top: 2rem;
   line-height: 3rem;
+  overflow: hidden;
 }
 .CTA h2 {
   margin: 0 6rem;
@@ -225,7 +226,69 @@ audio {
 #music.active audio {
   opacity: 1;
 }
-
+@media(max-height: 800px) {
+  .CTA {
+    bottom: 20% !important;
+    height: 150px !important;
+    border-radius: 50px !important;
+    padding: 0;
+    left: calc(50% - 400px) !important;
+  }
+  .CTA h2 {
+    margin-top: 2.8rem !important;
+  }
+  .CTA.active h2 {
+    margin-top: 0 !important;
+  }
+  #dArrow {
+    margin-top: 12px !important;
+  }
+  #intro {
+    bottom: 50% !important;
+    height: 230px !important;
+  }
+  #intro.active {
+    height: 230px !important;
+  }
+  #music {
+    left: 65% !important;
+    top: auto !important;
+    bottom: 24% !important;
+  }
+  #music.active {
+    left: calc(100% - calc(50% - 400px) - 330px) !important;
+    width: 330px !important;
+  }
+  #underLinks {
+    margin-top: 0.2rem !important;
+    padding: 0 !important;
+  }
+}
+@media(max-height: 600px) {
+  #intro.active, #intro {
+    height: auto !important;
+  }
+  #intro h1 {
+    font-size: 2.5rem !important;
+  }
+  #intro h3, #intro h4 {
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+  }
+  #underLinks {
+    pointer-events: none !important;
+    height: 0 !important;
+  }
+  .CTA {
+    height: 130px !important;
+  }
+  .CTA h2 {
+    margin-top: 2.2rem !important;
+  }
+  #music {
+    bottom: 22% !important;
+  }
+}
 @media(max-width: 1850px) {
   #home-section h1 {
     font-size: 3rem;
@@ -259,13 +322,69 @@ audio {
     bottom: 41%;
   }
 }
+@media (max-width: 890px) and (max-height: 800px) {
+  .CTA {
+    left: calc(50% - 200px) !important;
+  }
+  #intro {
+    width: 70vw !important;
+    left: calc(50% - 35vw) !important;
+    padding: 0 !important;
+    height: 230px !important;
+  }
+  #intro h4 {
+    width: auto !important;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+  #underLinks {
+    width: 70% !important;
+    padding: 0 !important;
+    left: 7% !important;
+    top: -65px !important;
+    filter: invert(1) !important;
+  }
+  #intro.active {
+    height: 230px !important;
+  }
+}
+@media (max-width: 890px) and (max-height: 500px) {
+  #underLinks {
+    top:-4% !important;
+    left: -50% !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 400px !important;
+    filter: invert(1) !important;
+  }
+  #underLinks a {
+    margin: auto !important;
+  }
+  .resume {
+    transform: rotate(270deg) !important;
+  }
+  #intro {
+    bottom: 40% !important;
+  }
+}
+@media (max-width: 890px) and (min-height: 501px) {
+  #underLinks {
+    filter: invert(0) !important;
+  }
+  #intro {
+    bottom: 35% !important;
+  }
+}
+@media (max-width: 890px) and (min-height: 801px) {
+  #intro {
+    height: 300px !important;
+  }
+}
 @media(max-width: 890px) {
   #intro {
-    overflow: visible;
+    overflow: visible !important;
     width: 300px;
-    height: 300px;
     left: calc(50% - 225px);
-    bottom: 35%;
   }
   #intro.active {
     height: 300px;
@@ -281,10 +400,10 @@ audio {
     left: 0;
     width: 375px;
     margin: 0 37.5px;
-    filter: invert(1);
+    filter: invert(1) !important;
   }
   #music {
-    visibility: hidden;
+    display: none;
     pointer-events: none;
   }
   #music.active {
@@ -295,70 +414,77 @@ audio {
     width: 300px;
   }
   #home-section h1 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
   #home-section h3 {
     font-size: 1.5rem;
     font-weight: 600;
   }
   #home-section h4 {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     font-weight: 500;
   }
   .CTA {
-    bottom: 6%;
+    bottom: 6% !important;
   }
 }
-@media(max-width: 520px) {
+@media(max-width: 630px) {
   #intro {
-    width: 250px;
-    height: 300px;
-    left: calc(50% - 160px);
-    bottom: 30%;
-    padding: 0 30px;
-    border-radius: 75px;
+    width: 250px !important;
+    height: 300px !important;
+    left: calc(50% - 150px) !important;
+    bottom: 30% !important;
+    padding: 0 30px !important;
+    border-radius: 75px !important;
   }
   #intro.active {
-    bottom: 30%;
+    bottom: 30% !important;
+    height: 300px !important;
   }
   #home-section h4{
-    width: 250px;
+    width: 250px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   #home-section h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
   .CTA {
-    bottom: 12%;
-    right: calc(50% - 150px);
-    width: 300px;
-    height: 100px;
-    border-radius: 75px;
-    padding-top: 20px;
+    bottom: 12% !important;
+    left: calc(50% - 150px) !important;
+    width: 300px !important;
+    height: 100px !important;
+    border-radius: 75px !important;
+    padding-top: 20px !important;
   }
   .CTA h2 {
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 1.5rem !important;
+    margin: 0 !important;
   }
   #dArrow {
     visibility: hidden;
   }
   #underLinks {
-    margin-top: 30px;
-    width: 250px;
+    margin-top: 30px !important;
+    width: 250px !important;
+    left: -3% !important;
+    filter: invert(1) !important;
+    top: -30% !important;
   }
   .resume {
-    font-size: 1rem;
-    font-weight: 500;
-    height: 30px;
-    width: 100px;
-    padding-top: 10px;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    height: 30px !important;
+    width: 100px !important;
+    padding-top: 10px !important;
   }
 }
 
 /* Navigation Styling __________________________________________________ */
 #navBar {
   position: fixed;
-  top: 93%;
+  top: auto;
+  bottom: 0;
   width: 100%;
   justify-content: space-between;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
@@ -369,6 +495,7 @@ audio {
 }
 #navBar.active {
   top: 10.3%;
+  bottom: auto;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   pointer-events: none;
 }
@@ -651,6 +778,7 @@ audio {
   opacity: 0;
   position: fixed;
   top: 0;
+  bottom: auto;
   margin-right: 50px;
   right: -50px;
   z-index: 90;
@@ -664,7 +792,8 @@ audio {
   margin-right: 0;
 }
 #mNav.home {
-  top: 90%;
+  top: calc(100% - 100px);
+  bottom: 0;
 }
 #mBkg {
   pointer-events: none !important;
@@ -795,16 +924,6 @@ audio {
 #aboutMain {
   margin-left: 15rem;
 }
-/* .aBkg {
-  position: absolute;
-  width: 112.5vw;
-  height: 100vh;
-  left: -12.5vw;
-  top: 0;
-  z-index: -1;
-  background-image: url("./assets/About\ bkg.png");
-  background-size: cover;
-} */
 #name {
   display: flex;
   padding-top: 7rem;
@@ -825,7 +944,7 @@ audio {
   opacity: 0;
   background: white;
   border-radius: 100px;
-  color: black;
+  color: black !important;
   margin: auto 0;
   height: 200px;
   transition: all 0.5s ease;
@@ -946,8 +1065,6 @@ audio {
     font-size: 1.5rem;
     width: 190px;
   }
-}
-@media(max-width: 1470px) {
   #nameTXT h1 {
     margin: 3rem auto 0;
   }
@@ -1009,6 +1126,59 @@ audio {
   #sSkills.norm, #sSkills.acitive, #sSkills {
     visibility: hidden;
     opacity: 0;
+  }
+}
+@media(max-height: 800px) and (max-width: 1590px) {
+  #sSkills {
+    opacity: 0;
+    visibility: hidden;
+  }
+  #aContent {
+    padding-bottom: 3rem;
+    height: fit-content;
+  }
+}
+@media(max-height: 700px) and (max-width: 1590px) {
+  #nameTXT, #tochi, #name {
+    height: 120px;
+  }
+  #nameTXT {
+    margin: 0;
+  }
+  #nameTXT h1 {
+    margin: 10px;
+  }
+  #aContent {
+    padding-bottom: 3rem;
+    height: fit-content;
+  }
+}
+@media(max-height: 700px) and (max-width: 1590px) {
+  #name {
+    padding-top: 5rem;
+  }
+  #nameTXT, #tochi, #name {
+    height: 100px;
+  }
+  #tochi {
+    width: 100px;
+  }
+  #nameTXT h1 {
+    margin: 0;
+  }
+  #aContent {
+    margin: 1rem 0;
+  }
+}
+@media(max-width: 1030px) and (max-height: 600px) {
+  #aContent p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1rem;
+  }
+  #aContent {
+    border-radius: 30px;
+    height: fit-content;
   }
 }
 @media(max-width: 820px) {
@@ -1076,16 +1246,6 @@ audio {
   opacity: 1;
   transition: all 2s ease;
 }
-/* .sBkg {
-  position: absolute;
-  width: 112.5vw;
-  height: 100vh;
-  left: -12.5vw;
-  top: 0;
-  z-index: -1;
-  background-image: url("./assets/Skills\ bkg2.png");
-  background-size: cover;
-} */
 #tSkills {
   position: absolute;
   text-align: center;
@@ -1153,9 +1313,12 @@ audio {
   transition: all 2s ease 1.5s;
 }
 #tName {
+  position: absolute;
+  left: 85px;
+  top: calc(50% - 1rem);
   color: white;
   opacity: 0;
-  margin: 84px;
+  margin: 0;
   transition: all 0.3s ease;
 }
 #tName.active {
@@ -1180,9 +1343,12 @@ audio {
   transition: all 2s ease 2s;
 }
 #oName {
+  position: absolute;
+  right: 85px;
+  top: calc(50% - 1rem);
   color: white;
   opacity: 0;
-  margin: 84px;
+  margin: 0;
   transition: all 0.3s ease;
 }
 #oName.active {
@@ -1237,6 +1403,9 @@ audio {
   transition: all 0.5s ease !important;
 }
 @media(max-width: 1535px) {
+  #skills-section > *, #tSkills > *, #oSkills > *{
+    transition-delay: 0s !important;
+  }
   #skTitle {
     margin-top: 1rem;
   }
@@ -1263,7 +1432,7 @@ audio {
     font-size: 2rem;
     width: fit-content;
   }
-  #tSkills.intro, #tSkills {
+  #tSkills.intro, #tSkills, #tSkills.norm {
     left: calc(60% - 224px);
     top: 13%;
     height: 325px;
@@ -1280,7 +1449,7 @@ audio {
     height: 50px;
     width: 50px;
   }
-  #oSkills.intro {
+  #oSkills.intro, #tSkills {
     top: 63%;
     right: auto;
     left: calc((60% - 224px));
@@ -1314,10 +1483,115 @@ audio {
     top: 110%;
   }
   #tName, #oName {
+    right: auto;
+    left: auto;
+    width: 100%;
     text-align: center;
-    margin: 5px auto 0;
   }
 }
+@media(max-height: 800px) and (min-width: 1250px) {
+  #skills-section > *, #tSkills > *, #oSkills > *{
+    transition-delay: 0s !important;
+  }
+  #skTitle {
+    font-size: 2.5rem;
+  }
+  #techLogos img, #otherLogos img {
+    height: 40px;
+    width: 40px;
+  }
+  #tSkills, #tSkills.intro, #tSkills.norm, #oSkills, #oSkills.intro, #oSkills.norm {
+    height: fit-content;
+  }
+}
+@media(max-height: 1000px) and (max-width: 1250px) {
+  #techLogos img, #otherLogos img {
+    height: 40px;
+    width: 40px;
+  }
+  #tSkills, #tSkills.intro, #tSkills.norm, #oSkills, #oSkills.intro, #oSkills.norm {
+    height: fit-content;
+    border-radius: 50px;
+  }
+  #tSkills, #tSkills.intro, #tSkils.norm {
+    top: auto;
+    bottom: 35%;
+  }
+  #oSkills #oSkills.intro #oSkills.norm {
+    top: auto;
+    bottom: 5%;
+  }
+  #techName.intro.norm, #otherName.intro.norm {
+    border-radius: 50px;
+  }
+  #tSkills.intro.norm h2, #oSkills.intro.norm h2 {
+    margin: 12px 0 5px;
+  }
+}
+@media(max-height: 1000px) and (max-width: 1250px) and (min-width: 1120px) {
+  #skTitle {
+    left: calc(50% - 69.93px);
+  }
+  #tSkills, #tSkills.intro, #tSkills.norm {
+    width: 300px;
+    left: 400px;
+    top: 25vh;
+  }
+  #oSkills, #oSkills.intro, #oSkills.norm {
+    width: 300px;
+    left: 750px;
+    top: 40vh;
+  }
+  #techName, #techName.intro, #techName.norm {
+    width: 300px;
+    left: 0px;
+  }
+  #otherName, #otherName.intro, #otherName.norm {
+    width: 300px;
+    left: 0px;
+  }
+}
+@media(max-width: 1120px) and (min-width: 580px) and (max-height: 730px) {
+  #techLogos img, #otherLogos img {
+    height: 25px;
+    width: 25px;
+  }
+  #tSkills, #tSkills.intro, #tSkills.norm {
+    width: 60vw;
+    left: calc(50% - 30vw) !important;
+    top: 125px !important;
+  }
+  #techLogos, #techLogos.intro, #techLogos.norm,
+  #otherLogos, #otherLogos.intro, #otherLogos.norm {
+    max-width: 55vw;
+  }
+  #oSkills, #oSkills.intro, #oSkills.norm {
+    top: 375px !important;
+    width: 60vw;
+    left: calc(50% - 30vw) !important;
+  }
+}
+/* @media(max-width: 1120px) and (min-width: 580px) and (max-height: 630px) {
+  #tSkills, #tSkills.intro, #tSkills.norm {
+    width: 70vw;
+    left: calc(50% - 35vw) !important;
+    top: 21% !important;
+  }
+  #techLogos, #techLogos.intro, #techLogos.norm {
+    max-width: 65vw;
+  }
+  #techName, #techName.intro, #techName.norm {
+    top: 110%;
+  }
+  #techLogos img, #techLogos.intro img, #techLogos.norm img,
+  #otherLogos img, #otherLogos.intro img, #otherLogos.norm img {
+    width: 30px;
+    height: 30px;
+  }
+  #oSkills, #oSkills.intro, #oSkills.norm {
+    top: 58% !important;
+  }
+} */
 @media(max-width: 1120px) {
   #skTitle {
     margin-top: 4rem;
@@ -1597,7 +1871,7 @@ audio {
   width: 200px;
   height: 50px;
   border-radius: 40px;
-  z-index: 40;
+  z-index: 888;
 }
 .aProj:hover {
   width: 275px;
@@ -1631,7 +1905,7 @@ audio {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
-  z-index: 35;
+  z-index: 777;
   transition: all 1s ease 0.5s;
 }
 #APB.active {
@@ -1645,13 +1919,14 @@ audio {
   position: absolute;
   top: -100%;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   transition: all 1s ease;
   pointer-events: all;
+  z-index: 888;
 }
 #allProj.active {
   opacity: 1;
-  top: 0%;
+  top: 130px;
   transition: all 1s ease 0.5s;
 }
 #allproj.norm {
@@ -1673,8 +1948,8 @@ audio {
 .projCard {
   cursor: pointer;
   position: relative;
-  width: 450px;
-  height: 300px;
+  width: 24vw;
+  height: 20vh !important;
   overflow: hidden;
   border: 4px solid white;
   border-radius: 100px;
@@ -1684,10 +1959,9 @@ audio {
 .projCard img {
   opacity: 0;
   object-fit: cover;
-  width: 450px;
+  width: 24vw;
   height: 300px;
   transition: all 0.5s ease;
-
 }
 .projCard:hover {
   background-color: rgba(0, 0, 0, 1);
@@ -1706,14 +1980,16 @@ audio {
   position: absolute;
   color: white;
   top: 0;
-  margin-top: 100px;
-  width: 200px;
-  height: 300px;
-  padding: 0 125px;
+  /* margin-top: 100px; */
+  width: 24vw;
+  height: 90px;
+  top: calc(50% - 55px);
+  left: calc(50% - 12vw);
+  /* padding: 0 125px; */
   transition: all 0.5s ease;
 }
-#APPR {
-  margin-top: 120px;
+#pTop {
+  margin-top: -0;
 }
 #apDesc {
   text-align: center;
@@ -1727,7 +2003,7 @@ audio {
 }
 #port {
   position: absolute;
-  bottom: 8%;
+  bottom: max(10%, 4vw);
   right: -2%;
   display: flex;
   font-size: 1.2rem;
@@ -1752,7 +2028,57 @@ audio {
 #port p {
   margin: 0 1rem;
 }
-@media(max-width: 1700px) {
+@media(max-height: 850px) {
+  .projImg, .brdr {
+    height: 22vw;
+    width: 14vw;
+    border-radius: 70px;
+  }
+}
+@media(max-width: 1750px) {
+  #projName {
+    left: -10%;
+  }
+  #projName h1 {
+    font-size: 3rem;
+  }
+  .titleContainer, .titleContainer2 {
+    width: 430px;
+  }
+  #UL {
+    left: 430px;
+  }
+  .titleContainer {
+    top: -35%;
+  }
+  .titleContainer2 {
+    top: -5%;
+  }
+  .descContainer {
+    left: 430px;
+  }
+  #pDesc {
+    top: 9%;
+    width: 580px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  .VP {
+    padding-left: 40px;
+    width: 180px;
+  }
+  .VP h3 {
+    font-size: 1.5rem;
+  }
+  .VP:hover {
+    width: 225px;
+  }
+  #rArrow {
+    margin: 2.6rem 20px 0 1.8rem;
+  }
+}
+@media(max-width: 1500px) {
   #track.active {
     opacity: 0;
     pointer-events: none;
@@ -1765,7 +2091,7 @@ audio {
     right: 12.5vw;
   }
   #allProj h1 {
-    top: 15%
+    top: -5%
   }
   #hovT h2 {
     width: 350px;
@@ -1774,7 +2100,7 @@ audio {
     margin: 13rem auto 0;
   }
   #allProj {
-    position: relative;
+    height: 70%;
   }
   #allProj.active.norm {
     transition: all 0.3 ease 0s !important;
@@ -1782,9 +2108,8 @@ audio {
   #projs {
     position: absolute;
     flex-direction: column;
-    height: 600px;
+    height: 100%;
     width: 100%;
-    top: calc(50% - 300px + 1.5rem);
     left: 12.5vw;
     justify-content: space-between;
   }
@@ -1795,11 +2120,13 @@ audio {
   }
   .projCard h2 {
     width: 300px;
-    margin: 2.5rem auto 0;
+    height: 175px;
+    left: calc(50% - 150px);
+    /* margin: 2.5rem auto 0; */
     padding: 0;
   }
-  .projCard:nth-child(3) h2, #APPR {
-    margin-top: 3.8rem;
+  #pTop {
+    margin-top: 8px;
   }
   #pContent.active, .VP.norm, .VP.active, .aProj.norm, .aProj.active {
     opacity: 0;
@@ -1808,8 +2135,7 @@ audio {
   }
   #apDesc {
     position: absolute;
-    height: 600px;
-    top: calc(50% - 300px + 1.5rem);
+    height: 100%;
     margin: 0;
     right: 12.5vw;
     max-width: 50vw;
@@ -1817,7 +2143,7 @@ audio {
     border-radius: 100px;
   }
   #apDesc h4 {
-    margin: 15rem 2rem 0;
+    margin: max(17vw, 180px) 2rem 0;
   }
 }
 @media(max-width: 1300px) {
@@ -1835,12 +2161,6 @@ audio {
     font-size: 3rem;
     text-align: center;
   }
-  #pTop {
-    padding-top: 1.3rem;
-  }
-  #pTop2 {
-    padding-top: 1.6rem;
-  }
   #apDesc, #allProj h1, #allProj #hovT, #port {
     visibility: hidden;
   }
@@ -1849,21 +2169,17 @@ audio {
     left: calc(50% - max(20vw, 150px));
     margin-top: 2rem;
   }
-  .projCard {
+  .projCard, .projCard img {
     height: 175px;
     width: max(40vw, 300px);
   }
   .projCard h2 {
-    width: max(40vw, 300px);
+    width: max(30vw, 250px);
+    left: calc(50% - calc(max(30vw, 250px)/2));
   }
   .projCard:nth-child(2) h2 {
     width: max(35vw, 270px);
     margin-left: max(2.5vw, 15px);
-  }
-}
-@media(max-width: 972px) {
-  #pTop {
-    padding-top: 0;
   }
 }
 @media(max-width: 400px) {
@@ -1876,10 +2192,7 @@ audio {
     height: 115px;
   }
   .projCard h2 {
-    margin-top: 0.8rem;
-  }
-  .projCard:nth-child(3) h2, #APPR {
-    margin-top: 2rem;
+    height: 115px;
   }
 }
 
@@ -2223,7 +2536,7 @@ audio {
     width: calc(400px + 32px + 1rem);
   }
   #socials.norm, #socials, #socials.active {
-    width: calc(400px + 16px + 1rem);
+    width: calc(400px + 16px + 2rem);
   }
   #emL {
     margin-left: 2rem;
@@ -2236,12 +2549,70 @@ audio {
     width: calc(400px + 16px + 2rem);
   }
 }
-@media(max-width: 1120px) {
+@media(max-height: 810px) {
+  #socials, #socials.norm {
+    border-radius: 20px;
+  }
+  #emL, #ghL, #liL {
+    padding: 1rem 0;
+  }
+}
+@media(max-height: 760px) {
+  #message {
+    height: 100px;
+  }
+}
+@media(max-height: 690px) and (min-width: 1120px) {
+  #emTop {
+    display: flex;
+  }
+  #email {
+    margin-right: 1rem;
+  }
+  #email, #topic {
+    padding: 8px;
+    width: 200px;
+  }
+  #topic {
+    width: 217px;
+  }
+  #message {
+    height: 80px;
+  }
+  #cTitle.active {
+    margin-top: 3rem;
+  }
+}
+@media(max-height: 690px) and (max-width: 1120px) {
+  #emTop {
+    display: flex;
+  }
+  #email {
+    margin-right: 1rem;
+  }
+  #email, #topic {
+    padding: 8px;
+    width: 200px;
+  }
+  #topic {
+    width: 217px;
+  }
+  #message {
+    height: 80px;
+  }
+  #cTitle.active {
+    margin-top: 3rem;
+  }
+  #fields {
+    margin-top: 9rem !important;
+  }
+}
+@media(max-width: 1120px)  {
   #contact-section {
     margin: 0;
   }
   #socials.norm, #socials, #socials.active {
-    left: calc(50% - calc(400px + 16px + 1rem)/2);
+    left: calc(50% - calc(400px + 16px + 2rem)/2);
   }
   #cTitle {
     margin-top: 5rem;

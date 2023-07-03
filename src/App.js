@@ -101,7 +101,7 @@ function App() {
   const [music, setMusic] = useState({show: false, play: false, wait: false})
 
   useEffect(() => {
-    if (page === "home") {
+    if (sec === "main" && page === "home") {
       setTimeout(() => {
         setMusic({...music, show: true})
         setTimeout(() => {
@@ -109,13 +109,13 @@ function App() {
         }, 1500);
       }, 1000);
     }
-    if (page === "about2") {
+    if (sec === "main" && page === "about2") {
       document.getElementById("music")?.classList.add("skl")
     } else {
       document.getElementById("music")?.classList.remove("skl")
     }
   // eslint-disable-next-line
-  }, [page])
+  }, [page, sec])
 
   useEffect(() => {
     if (music.show) {
@@ -127,12 +127,12 @@ function App() {
       document.getElementById("music")?.classList.add("playing")
       if (page !== "home") {
         document.getElementById("music")?.classList.add("travel")
-      } else {
+      } else if (page === "home" && sec === "main") {
         document.getElementById("music")?.classList.remove("travel")
       }
     } else {
       document.getElementById("music")?.classList.remove("playing")
-      if (page === "home") {
+      if (page === "home" && sec === "main") {
         document.getElementById("music")?.classList.remove("travel")
       }
     }
@@ -147,6 +147,10 @@ function App() {
 }, [music, page])
 
 useEffect(() => {
+  if (sec !== "main") {
+    document.getElementById("music")?.classList.add("travel")
+    document.getElementById("music")?.classList.remove("skl")
+  }
   if (sec !== "main" && !music.play) {
     setMHide(true)
   } else {

@@ -43,13 +43,13 @@ const About = ({page, VW}) => {
                     <img id="tochi" src={tochi} alt="Tochi" />
                     <div id="nameTXT">
                         <h1>Tochi Oramasionwu</h1>
-                        <p id="phon"><em>(Toe·chee Oh·ram·ass·ee·on·woo)</em></p>
+                        <p id="phon"><em>(TOH·chee Oh·RAH·ma·see·on·woo)</em></p>
                     </div>
                 </div>
                 <div id="aContent">
                     <p>
                         Hi there! I'm Tochi, a passionate Full-Stack web developer with a
-                        flair for creativity and a strong technical background. I combine my
+                        flair for creativity and a strong engineering background. I combine my
                         love for design and coding to bring visually stunning and highly
                         functional websites to life. <br/> <br/>
                         My goal is to deliver seamless user experiences that captivate and

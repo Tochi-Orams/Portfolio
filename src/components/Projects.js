@@ -105,12 +105,12 @@ const Projects = ({page, VW}) => {
         } else {
             conts.LL.style.right = `${LL}%`
         }
-        if (PR > 150) {
+        if (PR > 130) {
             conts.PR.style.right = `${PR - 210}%`
         } else {
             conts.PR.style.right = `${PR}%`
         }
-        if (LL > 20) {
+        if (LL > 0) {
             conts.GS.style.right = `${GS - 210}%`
         } else {
             conts.GS.style.right = `${GS}%`
@@ -140,12 +140,12 @@ const Projects = ({page, VW}) => {
     }
 
     useEffect(() => {
-        if (go && VW > 1700) {
+        if (go && VW > 1500) {
             requestAnimationFrame(step)
         }
-        if (VW < 1700) {
-            cancelAnimationFrame(stopID)
-        }
+        // if (VW < 1500) {
+        //     cancelAnimationFrame(stopID)
+        // }
     // eslint-disable-next-line
     }, [go, VW])
 
@@ -219,7 +219,7 @@ const Projects = ({page, VW}) => {
     }, [AP, page])
 
     useEffect(() => {
-        if (VW < 1700 && page === "projects") {
+        if (VW < 1500 && page === "projects") {
             document.getElementById("allProj")?.classList.add("active")
             setTitle("hover")
         } else {

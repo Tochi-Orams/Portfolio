@@ -315,43 +315,45 @@ const Contact = ({page, cHov}) => {
                                 />
                             </FormControl>
                         </div>
-                        <FormControl>
-                            <input
-                                className="input"
-                                id="email"
-                                name="email"
-                                placeholder="EMAIL"
-                                value={formik.values.email}
-                                onChange={formik.handleChange}
-                                onFocus={() => setFocs({...focs, EM: true})}
-                                onBlur={() => {setBlurs({...blurs, EM: true})
-                                setFocs({...focs, EM: false})}}
-                            />
-                            <div id="inUnder">
-                                {formik.errors.email && blurs.EM &&
-                                <p style={{color: "red", margin: 0}}>Please enter a valid email address</p>}
-                            </div>
-                        </FormControl>
-                        <FormControl>
-                            <select
-                                className="input"
-                                id="topic"
-                                name="topic"
-                                value={formik.values.topic}
-                                onChange={formik.handleChange}
-                                onBlur={() => setBlurs({...blurs, TOP: true})}
-                            >
-                                <option value="" disabled>TOPIC</option>
-                                <option value="Job">Job Opportunity</option>
-                                <option value="Freelance">Freelance project porposal</option>
-                                <option value="Networking">Networking connection</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            <div id="inUnder">
-                                {formik.values.topic === "" && blurs.TOP &&
-                                <p style={{color: "red", margin: 0}}>Please select a topic for your message</p>}
-                            </div>
-                        </FormControl>
+                        <div id="emTop">
+                            <FormControl>
+                                <input
+                                    className="input"
+                                    id="email"
+                                    name="email"
+                                    placeholder="EMAIL"
+                                    value={formik.values.email}
+                                    onChange={formik.handleChange}
+                                    onFocus={() => setFocs({...focs, EM: true})}
+                                    onBlur={() => {setBlurs({...blurs, EM: true})
+                                    setFocs({...focs, EM: false})}}
+                                />
+                                <div id="inUnder">
+                                    {formik.errors.email && blurs.EM &&
+                                    <p style={{color: "red", margin: 0}}>Please enter a valid email address</p>}
+                                </div>
+                            </FormControl>
+                            <FormControl>
+                                <select
+                                    className="input"
+                                    id="topic"
+                                    name="topic"
+                                    value={formik.values.topic}
+                                    onChange={formik.handleChange}
+                                    onBlur={() => setBlurs({...blurs, TOP: true})}
+                                >
+                                    <option value="" disabled>TOPIC</option>
+                                    <option value="Job">Job Opportunity</option>
+                                    <option value="Freelance">Freelance project porposal</option>
+                                    <option value="Networking">Networking connection</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div id="inUnder">
+                                    {formik.values.topic === "" && blurs.TOP &&
+                                    <p style={{color: "red", margin: 0}}>Please select a topic for your message</p>}
+                                </div>
+                            </FormControl>
+                        </div>
                         <FormControl>
                             <textarea
                                 className="input"
