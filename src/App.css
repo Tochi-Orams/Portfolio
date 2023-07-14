@@ -185,10 +185,10 @@ section {
 #music.travel {
   position: fixed;
   top: 82.5%;
-  left: 3.5%;
+  left: 3.5% !important;
 }
 #music.travel.active {
-  left: 3.5%;
+  left: 3.5% !important;
 }
 #music.travel.skl {
   top: 10%;
@@ -838,7 +838,7 @@ audio {
   pointer-events: none;
   right: 0;
   padding-left: 5rem;
-  margin-right: calc(3rem + 50px);
+  margin-right: min(9vw, 180px);
   display: flex;
   width: 520px;
   justify-content: space-between;
@@ -846,12 +846,14 @@ audio {
   transition: all 0.3s ease;
 }
 #menu.proj {
-  margin-right: calc(6rem + 50px);
+  padding: 0;
 }
 #menu.active {
   opacity: 1;
   pointer-events: all;
   transition: all 1s ease 0.2s;
+}#menu.proj.active {
+  padding-right: min(8vw, 50px);
 }
 #hm2, #ab2, #pj2, #ct2 {
   color: white;
@@ -1949,7 +1951,7 @@ audio {
   cursor: pointer;
   position: relative;
   width: 24vw;
-  height: 20vh !important;
+  height: 30vh;
   overflow: hidden;
   border: 4px solid white;
   border-radius: 100px;
@@ -1989,7 +1991,7 @@ audio {
   transition: all 0.5s ease;
 }
 #pTop {
-  margin-top: -0;
+  margin-top: 2rem;
 }
 #apDesc {
   text-align: center;
@@ -2033,6 +2035,9 @@ audio {
     height: 22vw;
     width: 14vw;
     border-radius: 70px;
+  }
+  .projCard {
+    height: 20vh !important;
   }
 }
 @media(max-width: 1750px) {
@@ -3009,7 +3014,7 @@ i {
     width: 300px !important;
   }
 }
-@media(max-width: 1040px) {
+@media(max-width: 1050px) {
   #flow {
     flex-direction: column;
   }

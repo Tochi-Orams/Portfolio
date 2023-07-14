@@ -49,7 +49,7 @@ const Greenstreak = ({setPage, setSec, handleNav}) => {
                 <div id="hLeft">
                     <h1>GSEL Website</h1>
                     <span>
-                        <a href="https://greenstreakenergies.com" target="_blank" rel="noreferrer" className="pButton">Live Demo</a>
+                        <a href="https://greenstreakenergies.com" target="_blank" rel="noreferrer" className="pButton">Visit Site</a>
                     </span>
                 </div>
                 <div id="PImgs">

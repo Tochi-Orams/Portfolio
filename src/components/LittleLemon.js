@@ -49,7 +49,7 @@ const LittleLemon = ({setPage, setSec, handleNav}) => {
                 <div id="hLeft">
                     <h1>Little Lemon Reservations</h1>
                     <span>
-                        <a href="https://little-lemon-reservations.web.app/" target="_blank" rel="noreferrer" className="pButton">Live Demo</a>
+                        <a href="https://little-lemon-reservations.web.app/" target="_blank" rel="noreferrer" className="pButton">Visit Site</a>
                         <a href="https://github.com/Tochi-Orams/Little-Lemon-App" target="_blank" rel="noreferrer" className="pButton">View Code</a>
                     </span>
                 </div>

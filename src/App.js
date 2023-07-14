@@ -93,6 +93,7 @@ function App() {
       document.getElementById("sec")?.classList.remove("pj")
       document.getElementById("navBar")?.classList.remove("pj")
       document.getElementById("mBkg")?.classList.remove("pj")
+      document.getElementById("menu")?.classList.remove("proj")
     }
   }, [sec])
 
