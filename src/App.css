@@ -248,7 +248,7 @@ audio {
     height: 230px !important;
   }
   #intro.active {
-    height: 230px !important;
+    height: 300px !important;
   }
   #music {
     left: 65% !important;
@@ -266,7 +266,10 @@ audio {
 }
 @media(max-height: 600px) {
   #intro.active, #intro {
-    height: auto !important;
+    height: 250px !important;
+  }
+  #intro {
+    height: 200px !important;
   }
   #intro h1 {
     font-size: 2.5rem !important;
@@ -276,8 +279,10 @@ audio {
     font-weight: 500 !important;
   }
   #underLinks {
-    pointer-events: none !important;
     height: 0 !important;
+  }
+  .resume:hover {
+    transform: rotate(270deg) scale(1.02) !important;
   }
   .CTA {
     height: 130px !important;
@@ -361,7 +366,7 @@ audio {
     margin: auto !important;
   }
   .resume {
-    transform: rotate(270deg) !important;
+    transform: rotate(270deg);
   }
   #intro {
     bottom: 40% !important;

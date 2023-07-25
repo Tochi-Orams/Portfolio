@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faX } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = ({handleNav, page, VW}) => {
     const [intro, setIntro] = useState(false)
@@ -48,7 +48,7 @@ const Hero = ({handleNav, page, VW}) => {
                 </h4>
                 {VW > 1750 ?
                 <div id="underLinks">
-                    <a className="resume" href="https://drive.google.com/file/d/1LyxEqPR_hzuqcuIMU8tm8_k_EpiGTBiH/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+                    <a className="resume" href="https://drive.google.com/file/d/1ceGHLdI4a7KpC8M3nw80dNa2fKFgIXIQ/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
                     <a href="https://github.com/Tochi-Orams" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faGithub} size="3x" />
                     </a>
@@ -61,7 +61,7 @@ const Hero = ({handleNav, page, VW}) => {
                     <a href="https://github.com/Tochi-Orams" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faGithub} size="3x" />
                     </a>
-                    <a className="resume" href="https://google.com">Resume</a>
+                    <a className="resume" href="https://drive.google.com/file/d/1ceGHLdI4a7KpC8M3nw80dNa2fKFgIXIQ/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
                     <a href="https://www.linkedin.com/in/tochi-oramasionwu/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} size="3x" />
                     </a>
