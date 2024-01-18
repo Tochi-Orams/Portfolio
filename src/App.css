@@ -164,6 +164,14 @@ section {
 .CTA.active #dArrow {
   opacity: 1;
 }
+#viewResume {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 #music {
   position: absolute;
   top: 10%;
@@ -1696,6 +1704,16 @@ audio {
   z-index: 10;
   transition: all 0.5s ease;
 }
+#pContentBackdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: -33%;
+  right: 0;
+  left: -25%;
+  width: 150%;
+  height: 190px;
+  backdrop-filter: blur(4px);
+}
 #pContent.active {
   opacity: 1;
   transition: all 1s ease 1s;
@@ -1718,6 +1736,7 @@ audio {
   left: 0;
   transition: all 0.5s ease;
   text-align: right;
+  z-index: 2;
 }
 #projName h1 {
   margin-top: 0;
@@ -1757,7 +1776,7 @@ audio {
 }
 #track {
   visibility: visible;
-  margin-top: 325px;
+  margin-top: 275px;
   opacity: 0;
   transform: scale(0.5);
   transition: all 0.5s ease;
@@ -1818,7 +1837,20 @@ audio {
   transition: all 1s ease;
 }
 .stag {
-  margin-top: 6rem;
+  animation: stagger1 10s ease-in-out infinite ;
+}
+.unStag {
+  animation: stagger2 10s ease-in-out infinite;
+}
+@keyframes stagger1 {
+  0% {margin-top: 6rem;}
+  50% {margin-top: 0rem;}
+  100% {margin-top: 6rem;}
+}
+@keyframes stagger2 {
+  0% {margin-top: 0rem;}
+  50% {margin-top: 6rem;}
+  100% {margin-top: 0rem;}
 }
 .button {
   opacity: 0;
@@ -1924,7 +1956,7 @@ audio {
 #allProj {
   opacity: 0;
   position: absolute;
-  top: -100%;
+  top: 100px;
   width: 100vw;
   height: 90vh;
   transition: all 1s ease;
@@ -1933,7 +1965,6 @@ audio {
 }
 #allProj.active {
   opacity: 1;
-  top: 130px;
   transition: all 1s ease 0.5s;
 }
 #allproj.norm {
@@ -1943,7 +1974,7 @@ audio {
 }
 #allProj h1 {
   text-align: center;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   color: white;
 }
 #projs {
@@ -1955,15 +1986,20 @@ audio {
 .projCard {
   cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 24vw;
   height: 30vh;
   overflow: hidden;
   border: 4px solid white;
-  border-radius: 100px;
-  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  background-color: transparent;
   transition: all 0.5s ease;
 }
 .projCard img {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
   opacity: 0;
   object-fit: cover;
   width: 24vw;
@@ -1984,20 +2020,12 @@ audio {
 }
 .projCard h2 {
   text-align: center;
-  position: absolute;
   color: white;
-  top: 0;
-  /* margin-top: 100px; */
-  width: 24vw;
-  height: 90px;
-  top: calc(50% - 55px);
-  left: calc(50% - 12vw);
-  /* padding: 0 125px; */
   transition: all 0.5s ease;
 }
-#pTop {
+/* #pTop {
   margin-top: 2rem;
-}
+} */
 #apDesc {
   text-align: center;
   margin: 100px auto 0;
@@ -2135,9 +2163,9 @@ audio {
     /* margin: 2.5rem auto 0; */
     padding: 0;
   }
-  #pTop {
+  /* #pTop {
     margin-top: 8px;
-  }
+  } */
   #pContent.active, .VP.norm, .VP.active, .aProj.norm, .aProj.active {
     opacity: 0;
     pointer-events: none;
